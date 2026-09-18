@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f7;
+  color: #182131;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+input {
+  font: inherit;
+}
+
+.mf-shell {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1rem;
+}
+
+.mf-titlebar,
+.mf-window,
+.mf-control-panel,
+.mf-chart-wrap,
+.mf-summary-grid div,
+.mf-conclusion,
+.mf-reference {
+  background: #ffffff;
+  border: 1px solid #d9e3e8;
+  border-radius: 8px;
+}
+
+.mf-titlebar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.mf-titlebar img {
+  flex: 0 0 auto;
+  height: 58px;
+  width: min(290px, 34vw);
+}
+
+.mf-titlebar h1 {
+  font-size: clamp(1.75rem, 3.3vw, 3rem);
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.mf-window {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 320px minmax(0, 1fr);
+  padding: 1rem;
+}
+
+.mf-control-panel {
+  align-content: start;
+  display: grid;
+  gap: 0.95rem;
+  padding: 1rem;
+}
+
+.mf-panel-head {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.mf-panel-head h2 {
+  font-size: 1rem;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.mf-control-panel label {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.mf-control-panel label span,
+.mf-summary-grid span {
+  color: #60727d;
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mf-control-panel input[type="range"] {
+  accent-color: #2e7678;
+  width: 100%;
+}
+
+.mf-control-panel output {
+  color: #172033;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+#region-pill {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.36rem 0.62rem;
+  white-space: nowrap;
+}
+
+#region-pill[data-state="profit"] {
+  background: #fff1cf;
+  border: 1px solid #f2c96a;
+  color: #8a5600;
+}
+
+#region-pill[data-state="loss"] {
+  background: #e9f1ff;
+  border: 1px solid #b8ccef;
+  color: #315d9b;
+}
+
+.mf-analysis {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.mf-chart-wrap {
+  min-width: 0;
+  padding: 1rem;
+}
+
+#mf-chart {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.mf-summary-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mf-summary-grid div {
+  padding: 0.85rem;
+}
+
+.mf-summary-grid strong {
+  display: block;
+  font-size: 1.32rem;
+  margin-top: 0.18rem;
+}
+
+.mf-conclusion {
+  color: #2d424d;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding: 1rem;
+}
+
+.mf-reference {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.mf-reference h2 {
+  font-size: 1rem;
+  margin: 0 0 0.6rem;
+}
+
+.mf-reference p {
+  color: #2d424d;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 0.8rem;
+}
+
+.mf-reference a {
+  color: #0d5f7a;
+  font-weight: 700;
+}
+
+.mf-bibtex-head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.mf-bibtex-head span {
+  color: #60727d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mf-bibtex-head button {
+  background: #183238;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.45rem 0.65rem;
+}
+
+.mf-bibtex-head button[data-copied="true"] {
+  background: #1f6a3d;
+}
+
+.mf-reference pre {
+  background: #f6f8fa;
+  border: 1px solid #d9e3e8;
+  border-radius: 8px;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0.9rem;
+}
+
+.mf-reference code {
+  color: #182131;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 960px) {
+  .mf-window {
+    grid-template-columns: 1fr;
+  }
+
+  .mf-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .mf-shell {
+    padding: 0.75rem;
+  }
+
+  .mf-titlebar h1 {
+    font-size: 1.55rem;
+    white-space: normal;
+  }
+
+  .mf-titlebar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mf-titlebar img {
+    height: auto;
+    width: min(100%, 290px);
+  }
+
+  .mf-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
