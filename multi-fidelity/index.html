@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multifidelity Break-even Point Analysis</title>
+    <link rel="stylesheet" href="/assets/css/multi-fidelity.css">
+  </head>
+  <body>
+    <main class="mf-shell">
+      <header class="mf-titlebar">
+        <img src="/images/projects/multifidelity-bep-logo.svg" alt="Multifidelity BEP Analysis logo">
+        <h1>Multifidelity Break-even Point Analysis</h1>
+      </header>
+
+      <section class="mf-window">
+        <aside class="mf-control-panel">
+          <div class="mf-panel-head">
+            <h2>Analysis Panel</h2>
+            <output id="region-pill">Loss region</output>
+          </div>
+
+          <label>
+            <span>Optimization cases</span>
+            <input id="case-count" type="range" min="1" max="40" value="12">
+            <output id="case-count-out">12</output>
+          </label>
+          <label>
+            <span>Design points per case</span>
+            <input id="design-points" type="range" min="1" max="40" value="30">
+            <output id="design-points-out">30</output>
+          </label>
+          <label>
+            <span>Design iterations</span>
+            <input id="design-iters" type="range" min="10" max="160" value="50">
+            <output id="design-iters-out">50</output>
+          </label>
+          <label>
+            <span>CFD cost scale</span>
+            <input id="cfd-scale" type="range" min="45" max="160" value="95">
+            <output id="cfd-scale-out">95 core-hours / C</output>
+          </label>
+          <label>
+            <span>MF training cost</span>
+            <input id="training-cost" type="range" min="60" max="260" value="150">
+            <output id="training-cost-out">150k core-hours</output>
+          </label>
+          <label>
+            <span>MF solve cost per case</span>
+            <input id="mf-solve-cost" type="range" min="0" max="5" step="0.1" value="0.2">
+            <output id="mf-solve-cost-out">0.2k core-hours</output>
+          </label>
+        </aside>
+
+        <section class="mf-analysis">
+          <div class="mf-chart-wrap">
+            <svg id="mf-chart" viewBox="0 0 980 620" role="img" aria-label="Break-even analysis chart"></svg>
+          </div>
+
+          <div class="mf-summary-grid">
+            <div>
+              <span>Complexity C</span>
+              <strong id="summary-complexity">0</strong>
+            </div>
+            <div>
+              <span>Break-even C</span>
+              <strong id="summary-bep">0</strong>
+            </div>
+            <div>
+              <span>CFD-driven cost</span>
+              <strong id="summary-cfd">0</strong>
+            </div>
+            <div>
+              <span>MF total cost</span>
+              <strong id="summary-mf">0</strong>
+            </div>
+            <div>
+              <span>Core-hour delta</span>
+              <strong id="summary-delta">0</strong>
+            </div>
+            <div>
+              <span>Required cases</span>
+              <strong id="summary-required">0</strong>
+            </div>
+          </div>
+
+          <div class="mf-conclusion" id="conclusion"></div>
+        </section>
+      </section>
+
+      <section class="mf-reference" aria-labelledby="reference-title">
+        <h2 id="reference-title">Reference</h2>
+        <p>
+          Aobo Yang, Jichao Li, and Rhea P. Liem,
+          "Generalizable Multifidelity Aerodynamic Wing Shape Design Optimization,"
+          published online 3 Feb 2026.
+          <a href="https://doi.org/10.2514/1.C038587">https://doi.org/10.2514/1.C038587</a>
+        </p>
+        <div class="mf-bibtex-head">
+          <span>BibTeX</span>
+          <button id="copy-bibtex" type="button">Copy BibTeX</button>
+        </div>
+        <pre><code id="bibtex-entry">@article{yang2026generalizable,
+  title   = {Generalizable Multifidelity Aerodynamic Wing Shape Design Optimization},
+  author  = {Yang, Aobo and Li, Jichao and Liem, Rhea P.},
+  journal = {Journal of Aircraft},
+  year    = {2026},
+  note    = {Published online 3 February 2026},
+  doi     = {10.2514/1.C038587},
+  url     = {https://doi.org/10.2514/1.C038587}
+}</code></pre>
+      </section>
+    </main>
+
+    <script src="/assets/js/multi-fidelity.js"></script>
+  </body>
+</html>

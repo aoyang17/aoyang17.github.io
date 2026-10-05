@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Aobo blue sphere logo</title>
+  <defs>
+    <radialGradient id="sphere" cx="28%" cy="22%" r="78%">
+      <stop offset="0%" stop-color="#f7fdff"/>
+      <stop offset="18%" stop-color="#9fe2ff"/>
+      <stop offset="45%" stop-color="#34a7ff"/>
+      <stop offset="75%" stop-color="#315be8"/>
+      <stop offset="100%" stop-color="#172a99"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="27" fill="url(#sphere)"/>
+</svg>
