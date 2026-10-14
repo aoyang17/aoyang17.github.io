@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 144" role="img" aria-labelledby="title desc">
+  <title id="title">GenAero logo</title>
+  <desc id="desc">GenAero wordmark with an aircraft wing, design network, and aerodynamic streamlines.</desc>
+  <defs>
+    <linearGradient id="ga-body" x1="18" y1="44" x2="130" y2="74" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B4EA2"/>
+      <stop offset="0.58" stop-color="#073B83"/>
+      <stop offset="1" stop-color="#062B63"/>
+    </linearGradient>
+    <linearGradient id="ga-tail" x1="92" y1="24" x2="130" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#083B86"/>
+      <stop offset="1" stop-color="#05275D"/>
+    </linearGradient>
+    <linearGradient id="ga-stream" x1="16" y1="102" x2="104" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#22C7D9"/>
+    </linearGradient>
+    <linearGradient id="ga-word" x1="168" y1="72" x2="538" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.68" stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#5B21B6"/>
+    </linearGradient>
+    <filter id="ga-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#1E293B" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="144" height="144" rx="32" fill="#F8FAFC"/>
+  <g filter="url(#ga-soft)">
+    <path d="M15 73C48 65 80 57 101 48C111 43 122 31 130 23L137 22L127 52C119 54 111 56 104 59L132 64L116 80L101 117L89 117L82 101L71 98C51 91 33 84 15 73Z" fill="url(#ga-body)"/>
+    <path d="M103 48C112 40 122 29 130 23L137 22L127 52C119 54 111 56 104 59L92 62Z" fill="url(#ga-tail)"/>
+    <path d="M80 94L101 117L116 80L132 64L103 59L91 63L83 78Z" fill="#0A66AD" opacity="0.9"/>
+    <path d="M16 76C43 75 65 75 86 79" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="3.8"/>
+    <path d="M87 78L104 59M91 93L116 80M91 63L132 64M82 101L116 80M74 88L104 59M92 63L116 80" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" opacity="0.92"/>
+    <path d="M83 78L101 88L91 93L74 88Z" fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="2.6" opacity="0.92"/>
+  </g>
+  <g fill="none" stroke="url(#ga-stream)" stroke-linecap="round" stroke-width="2.4">
+    <path d="M18 79C39 80 59 83 78 91C88 95 96 98 103 97"/>
+    <path d="M18 84C38 86 58 91 74 101C84 108 94 111 106 109"/>
+    <path d="M18 89C39 92 58 100 72 111C82 119 94 123 109 121"/>
+    <path d="M18 94C39 98 57 108 70 121"/>
+  </g>
+  <circle cx="83" cy="78" r="5.8" fill="#FFFFFF"/>
+  <circle cx="101" cy="88" r="5.8" fill="#FFFFFF"/>
+  <circle cx="91" cy="93" r="5.8" fill="#FFFFFF"/>
+  <circle cx="74" cy="88" r="5.8" fill="#FFFFFF"/>
+  <circle cx="91" cy="63" r="4.8" fill="#FFFFFF"/>
+  <circle cx="116" cy="80" r="4.8" fill="#FFFFFF"/>
+
+  <text
+    x="168"
+    y="84"
+    fill="url(#ga-word)"
+    font-family="GardensC, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    font-size="58"
+    font-weight="400"
+    letter-spacing="0">GenAero</text>
+  <text
+    x="171"
+    y="114"
+    fill="#475569"
+    font-family="GardensC, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    font-size="18"
+    font-weight="400"
+    letter-spacing="1.2"
+    textLength="365"
+    lengthAdjust="spacingAndGlyphs">Operation-aware Aircraft Design</text>
+</svg>
